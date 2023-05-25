@@ -5,6 +5,8 @@ def solveNQueens(n):
     res = []
     board = [["."] * n for i in range(n)]
 
+    # In this updated code, the heuristic function calculates the number of non-attacking positions for queens in the remaining rows. The columns list is then sorted based on the heuristic value, ensuring that the most promising columns are considered first during backtracking. This sorting improves the efficiency of the algorithm by pruning unpromising branches early.
+
     # Heuristic function to estimate the number of queens that can be placed in the remaining rows
     def heuristic(r):
         non_attacking = n - len(col)  # Number of columns available for queens
