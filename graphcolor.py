@@ -1,5 +1,4 @@
 def bipartite(graph, node, visited, color, c):
-    
     visited[node] = 1
     color[node] = c
     for child in graph[node]:
