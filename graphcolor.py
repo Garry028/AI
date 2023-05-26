@@ -1,9 +1,9 @@
-def bipartite(graph, node, visited, color, c):
+def is_colorable(graph, node, visited, color, c):
     visited[node] = 1
     color[node] = c
     for child in graph[node]:
         if not visited[child]:
-            tmp = bipartite(graph, child, visited, color, c^1)
+            tmp = is_colorable(graph, child, visited, color, c^1)
             # ^ is xor operator if 1 then 0 if 0 then 1
             if tmp == False:
                 return False
@@ -30,9 +30,9 @@ for u,v in ipt:
     graph[u].append(v)
     graph[v].append(u)
 
-temp = (bipartite(graph,1,visited,color,0))
+temp = (is_colorable(graph,1,visited,color,0))
 
 if temp:
-    print("Bipartite Graph")
+    print("Valid coloring in Graph")
 else:
-    print("Not Bipartite Graph")
+    print("Not valid coloring in Graph")

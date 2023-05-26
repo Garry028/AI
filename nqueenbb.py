@@ -20,7 +20,7 @@ def solveNQueens(n):
             res.append(copy)
             return
 
-        # Sort the columns based on the heuristic function
+        # Sort the columns based on the heuristic function so that most promising will be choosem first
         columns = sorted(range(n), key=lambda c: heuristic(r + 1))
 
         for c in columns:

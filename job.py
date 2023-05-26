@@ -1,6 +1,7 @@
 n = 3  # number of jobs
 #  job-id , time , profit
-
+# TC->O(n)
+# SC->O(n)
 jobs = [['Job1', '2', '100'], ['Job2', '3', '450'], ['Job3', '3', '325']]
 # extract profit from jobs
 sorter = lambda job: int(job[2])
