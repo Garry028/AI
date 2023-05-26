@@ -42,4 +42,10 @@ def solveNQueens(n):
     backtrack(0)
     return res
 
-print(solveNQueens(4))
+# Call the function and print the solutions in matrix format
+solutions = solveNQueens(4)
+#  for printing in matrix type format
+for solution in solutions:
+    for row in solution:
+        print(" ".join(row))
+    print()

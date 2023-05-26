@@ -38,4 +38,9 @@ def solveNQueens(n):
     backtrack(0)  # go back to once again and check another possible answer
     return res
 
-print(solveNQueens(4))
+solutions = solveNQueens(4)
+#  for printing in matrix type format
+for solution in solutions:
+    for row in solution:
+        print(" ".join(row))
+    print()
